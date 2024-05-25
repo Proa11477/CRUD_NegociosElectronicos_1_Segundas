@@ -1,0 +1,81 @@
+body{
+    margin: 0;
+    margin-top: -22px;
+    font-family: Arial;    
+    display: grid;
+    background-color: #F4F4F4;
+}
+header{
+    background-color: #333333;
+    color: white;
+    width: 100%;
+    height: 80px;
+    padding-top: 10px;
+    text-align: center;
+    margin: 0;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    background-color: #0379FE;
+    color: white;
+}
+
+#opMenu{
+    margin-inline: 5px;
+    text-align: center;
+    width: 90px;
+}
+
+#opMenu:hover{
+    color: white;
+    cursor: pointer;
+    background-color: #0061cf;
+}
+
+main{
+    display: flex;
+    padding: 50px;
+}
+
+section{
+    margin-inline-end: 40px;
+}
+
+#TarjetaConcierto{
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+    width: 400px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /*HVD*/
+
+}
+
+#TarjetaConcierto:hover{
+    background-color: #0061cf;
+    color: white;
+    cursor: pointer;
+}
+
+
+#TarjetaConcierto img{
+    width: 400px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+#TarjetaConcierto h1{
+    margin-top: 15px;
+    margin-bottom: 0;
+    font-size: 30px;
+}
+
+#TarjetaConcierto h2{
+    margin-top: 0;
+}
+
+#TarjetaConcierto h3{
+
+}
