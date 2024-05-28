@@ -1,46 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CRUD.css">
-    <title>BOLETOS ELECthONICOS</title>
+    <link rel="icon" type="image/png" href="Entradas Ticket.png">
+    <title>BOLETOS ELECTRONICOS</title>
 </head>
 <body>
     <header>
         <h1>Boletos Electronicos</h1>
     </header>
     <nav>
-            <div id="opMenu">
+            <div class="opMenu">
                 <p>Inicio</p>
             </div>
-            <div id="opMenu">
+            <div class="opMenu">
                 <p>Conciertos</p>
             </div>
-            <div id="opMenu">
+            <div class="opMenu">
                 <p>Contactos</p>
             </div>
     </nav>
-
+        
     <main>
         <section>
-            <article id="TarjetaConcierto">
+            <article class="TarjetaConcierto" onclick="ConciertoVl(1)">
                 <img src="Concierto 1.jpg" alt="Concierto1">
                 <h1>Natanael Cano</h1>
                 <p>23 Agosto 2024</p>
-                <p>MX $3,490,00</p>
+                <p id="PrecioNata">MX $3,490,00</p>
             </article>
-            <article id="TarjetaConcierto">
+            <article class="TarjetaConcierto" onclick="ConciertoVl(2)">
                 <img src="Concierto 2.jpg" alt="Concierto2">
                 <h1>Twenty One Pilots</h1>
                 <p>20 Febrero 2025</p>
-                <p>MX $2,780.00</p>
+                <p id="PrecioTwOP">MX $2,780.00</p>
             </article>
-            <article id="TarjetaConcierto">
+            <article class="TarjetaConcierto" onclick="ConciertoVl(3)">
                 <img src="Concierto 3.jpg" alt="Concierto3">
                 <h1>Piso 21</h1>
                 <p>15 Agosto 2024</p>
-                <p>MX $1,420.00</p>
+                <p id="PrecioPiso">MX $1,420.00</p>
             </article>
         </section>
         
@@ -48,8 +49,26 @@
         
         
         <section>
-            <article>
-                <h1>Compra de Boletos</h1>
+            <article class="TarjetaEntradas">
+                <h1>Compra de boletos</h1>
+                <div class="Entradas">
+                    <p>Selecciona la fecha:</p>
+                    <input type="date" name="Fecha" id="fecha">
+                    <p>Nombre:</p>
+                    <input type="text" name="Nombre" id="nombre">
+                    <p>Email:</p>
+                    <input type="email" name="Email" id="email">
+                    <p>Cantidad:</p>
+                    <input type="number" name="Cantidad" id="cantidad" value="1" min="1">
+                    <p>Selecciona concierto:</p>
+                    <select name="Concierto" id="concierto">
+                        <option value="1">Natanael Cano</option>
+                        <option value="2">Twenty One Pilots</option>
+                        <option value="3">Piso 21</option>
+                    </select>
+                    <br><br>
+                    <button id="comprar">Comprar</button>
+                </div>
             </article>
         </section>
         
@@ -58,21 +77,28 @@
         
         
         <section>
-            <article>
-                <h1>carro</h1>
+            <article class="TarjetaResultados">
+                <h1>Carro</h1>
                 <table>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Email</th>
-                        <th>Concierto</th>
-                        <th>Fecha</th>
-                        <th>Cantidad</th>
-                        <th></th>
-                    </tr>                                    
+                    <thead>
+                        <tr>
+                            <th style="width: 90px;">Nombre</th>
+                            <th style="width: 150px;">Email</th>
+                            <th style="width: 90px;">Concierto</th>
+                            <th style="width: 90px;">Fecha</th>
+                            <th style="width: 90px;">Cantidad</th>
+                            <th style="width: 90px;"></th>
+                        </tr> 
+                    </thead>
+                    <tbody id="contenidoTabla">
+
+                    </tbody>                                                       
                 </table>
+                <div id="mensaje" class="mensaje"></div>
             </article>
         </section>
     </main>
 
 </body>
 </html>
+<script src="CRUD.js"></script>

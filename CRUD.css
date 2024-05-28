@@ -22,13 +22,13 @@ nav{
     color: white;
 }
 
-#opMenu{
+.opMenu{
     margin-inline: 5px;
     text-align: center;
     width: 90px;
 }
 
-#opMenu:hover{
+.opMenu:hover{
     color: white;
     cursor: pointer;
     background-color: #0061cf;
@@ -36,14 +36,15 @@ nav{
 
 main{
     display: flex;
-    padding: 50px;
+    padding-left: 50px;
+    padding-top: 50px;
 }
 
 section{
     margin-inline-end: 40px;
 }
 
-#TarjetaConcierto{
+.TarjetaConcierto{
     background-color: white;
     border-radius: 10px;
     padding: 20px;
@@ -54,28 +55,113 @@ section{
 
 }
 
-#TarjetaConcierto:hover{
+.TarjetaConcierto:hover{
     background-color: #0061cf;
     color: white;
     cursor: pointer;
 }
 
 
-#TarjetaConcierto img{
+.TarjetaConcierto img{
     width: 400px;
     border-radius: 10px 10px 0px 0px;
 }
 
-#TarjetaConcierto h1{
+.TarjetaConcierto h1{
     margin-top: 15px;
     margin-bottom: 0;
     font-size: 30px;
 }
 
-#TarjetaConcierto h2{
-    margin-top: 0;
+.TarjetaEntradas{
+    background-color: white;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /*HVD*/
+    width: 200px;
+    padding: 10px;
+    border-radius: 8px;    
 }
 
-#TarjetaConcierto h3{
+.TarjetaEntradas h1{
+    font-size: xx-large;
+}
 
+.Entradas{
+    display: block;
+}
+
+
+.Entradas input{
+    height: 30px;
+    width: 190px;
+    border-radius: 5px;
+    border: solid gray 1px;
+}
+
+.Entradas select{
+    height: 35px;
+    width: 195px;
+    border-radius: 5px;
+    border: solid gray 1px;
+}
+
+.Entradas p{
+    margin-bottom: 5px;
+}
+
+.Entradas button{
+    background-color: #0379FE;
+    border: none;
+    border-radius: 5px;
+    height: 35px;
+    width: 195px;
+    color: white;
+    cursor: pointer;
+}
+
+.Entradas button:hover{
+    background-color: #0061cf;
+
+}
+
+.TarjetaResultados{
+    background-color: white;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /*HVD*/
+    border-radius: 8px;
+    padding: 15px;
+    width: 100%;
+}
+.TarjetaResultados h1{
+    font-size: xx-large;
+}
+
+table th{
+    text-align: start;
+    padding: 10px;
+}
+thead tr{
+    background-color: #0379FE;
+    color: white;
+    height: 40px;
+}
+
+#contenidoTabla img{
+    height: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+table{
+    border-collapse: collapse;
+
+}
+th,td{
+    border: 1px #CAD5DF solid;
+}
+
+
+.mensaje{
+    font-family: 'Courier New';
+    font-size: large;
+    text-align: center;
+    font-style: italic;
+    color: white;
 }
